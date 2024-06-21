@@ -1,6 +1,6 @@
 #version 330 compatibility
 
-out vec4 starData; //rgb = star color, a = flag for weather or not this pixel is a star.
+out vec4 starData; //rgb = star color, a = flag for whether or not this pixel is a star.
 
 void main() {
 	gl_Position = ftransform();
