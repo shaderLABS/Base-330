@@ -7,7 +7,7 @@ uniform mat4 gbufferProjectionInverse;
 uniform vec3 fogColor;
 uniform vec3 skyColor;
 
-in vec4 starData; //rgb = star color, a = flag for weather or not this pixel is a star.
+in vec4 starData; //rgb = star color, a = flag for whether or not this pixel is a star.
 
 float fogify(float x, float w) {
 	return w / (x * x + w);
