@@ -10,4 +10,7 @@ layout(location = 0) out vec4 color;
 
 void main() {
 	color = glcolor * texture(lightmap, lmcoord);
+	if (color.a < 0.1) {
+		discard;
+	}
 }
