@@ -24,7 +24,7 @@ vec3 screenToView(vec3 screenPos) {
 	return tmp.xyz / tmp.w;
 }
 
-/* DRAWBUFFERS:0 */
+/* RENDERTARGETS: 0 */
 layout(location = 0) out vec4 color;
 
 void main() {
