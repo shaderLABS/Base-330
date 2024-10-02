@@ -2,6 +2,8 @@
 
 uniform sampler2D lightmap;
 
+uniform float alphaTestRef = 0.1;
+
 in vec2 lmcoord;
 in vec4 glcolor;
 
@@ -10,7 +12,7 @@ layout(location = 0) out vec4 color;
 
 void main() {
 	color = glcolor * texture(lightmap, lmcoord);
-	if (color.a < 0.1) {
+	if (color.a < alphaTestRef) {
 		discard;
 	}
 }
